@@ -1,1 +1,7 @@
-@import url("./preflight.css")
+@import url("./preflight.css");
+@import url("./properties.css");
+
+:root {
+  font-family: "Cousine", ui-monospace, "Cascadia Code", "Source Code Pro",
+    Menlo, Consolas, "DejaVu Sans Mono", monospace;
+}
