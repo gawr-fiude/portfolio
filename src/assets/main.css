@@ -5,3 +5,47 @@
   font-family: "Cousine", ui-monospace, "Cascadia Code", "Source Code Pro",
     Menlo, Consolas, "DejaVu Sans Mono", monospace;
 }
+
+body {
+  background: var(--color-base);
+  color: var(--color-text);
+}
+
+*::selection {
+  background-color: var(--color-peach);
+}
+
+*:focus-visible {
+  outline: 2px dashed var(--color-primary);
+  outline-offset: 0.5rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+p {
+  max-width: 60ch;
+}
+
+a {
+  text-decoration: 2px underline dashed var(--color-primary);
+}
+
+a:focus,
+a:hover {
+  background: var(--color-peach);
+}
+
+.container {
+  width: min(100ch, 100vw - 2rem);
+  margin: 0 auto;
+}
