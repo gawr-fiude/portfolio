@@ -2,13 +2,16 @@
   <section>
     <h1>
       Hello World! <br />
-      I'm Eduardo Eiji
-      <a
-        href="https://en.wikipedia.org/wiki/Goto"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Goto</a
-      >.
+      I'm
+      <span class="name"
+        >Eduardo Eiji
+        <a
+          href="https://en.wikipedia.org/wiki/Goto"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Goto</a
+        ></span
+      >
     </h1>
 
     <p>
@@ -18,7 +21,8 @@
         target="_blank"
         rel="noopener noreferrer"
         >Curitiba</a
-      >. Trying to make the world a better place, one
+      >. <br />
+      Trying to make the world a better place, one
       <span class="line-through">div</span> element at a time.
     </p>
   </section>
@@ -27,6 +31,15 @@
 <script setup></script>
 
 <style scoped>
+section {
+  margin-top: 8rem;
+}
+
+.name {
+  color: var(--color-primary);
+  font-weight: bolder;
+}
+
 .line-through {
   text-decoration: 2px line-through;
 }
