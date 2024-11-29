@@ -6,8 +6,7 @@
 
     <SectionWorkHistory />
 
-    <h2 id="education">Education</h2>
-    <PlaceholderSection v-for="item in [1, 2, 3, 4]" :key="item" />
+    <SectionEducation />
   </main>
 </template>
 
@@ -15,6 +14,7 @@
 import SectionIntroduction from "./components/SectionIntroduction.vue";
 import SectionAboutMe from "./components/SectionAboutMe.vue";
 import SectionWorkHistory from "./components/SectionWorkHistory.vue";
+import SectionEducation from "./components/SectionEducation.vue";
 
 import PlaceholderSection from "@/components/PlaceholderSection.vue";
 </script>
