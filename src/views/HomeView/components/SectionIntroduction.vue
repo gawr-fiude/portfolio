@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="home-section">
     <h1>
       Hello World! <br />
       I'm

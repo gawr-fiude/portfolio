@@ -27,6 +27,8 @@ h2 {
 
 <style>
 .home-section {
+  border-bottom: 2px dashed var(--color-primary);
+
   h2 {
     padding-top: 4rem;
     transform: translateX(-1ch);
