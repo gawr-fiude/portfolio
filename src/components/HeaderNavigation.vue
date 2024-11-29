@@ -37,8 +37,8 @@ const navLinks = [
     to: "#about-me",
   },
   {
-    label: "Curriculum",
-    to: "#curriculum",
+    label: "Work History",
+    to: "#work-history",
   },
   {
     label: "Education",

@@ -1,6 +1,8 @@
 <template>
   <section class="home-section">
-    <h2 id="about-me"><a href="#about-me">#About Me</a></h2>
+    <h2 id="about-me">
+      <a href="#about-me"><span>#</span>About Me</a>
+    </h2>
 
     <p>
       I was born in
@@ -65,8 +67,7 @@
           target="_blank"
           rel="noopener noreferrer"
           >Divinity: Original Sin 2</a
-        >
-        .
+        >.
       </p>
 
       <p>
@@ -154,10 +155,5 @@
 kbd {
   border: 1px solid black;
   padding: 0.2rem;
-}
-
-h2 {
-  transform: translateX(-1ch);
-  margin-bottom: 1rem;
 }
 </style>

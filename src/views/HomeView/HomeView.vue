@@ -4,8 +4,7 @@
 
     <SectionAboutMe />
 
-    <h2 id="curriculum">Curriculum</h2>
-    <PlaceholderSection v-for="item in [1, 2, 3, 4]" :key="item" />
+    <SectionWorkHistory />
 
     <h2 id="education">Education</h2>
     <PlaceholderSection v-for="item in [1, 2, 3, 4]" :key="item" />
@@ -15,6 +14,7 @@
 <script setup>
 import SectionIntroduction from "./components/SectionIntroduction.vue";
 import SectionAboutMe from "./components/SectionAboutMe.vue";
+import SectionWorkHistory from "./components/SectionWorkHistory.vue";
 
 import PlaceholderSection from "@/components/PlaceholderSection.vue";
 </script>
@@ -29,6 +29,12 @@ h2 {
 .home-section {
   h2 {
     padding-top: 4rem;
+    transform: translateX(-1ch);
+    margin-bottom: 1rem;
+  }
+
+  h2 > a > span:first-child {
+    color: var(--color-primary);
   }
 
   p {
