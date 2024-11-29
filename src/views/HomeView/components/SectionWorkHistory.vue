@@ -1,6 +1,8 @@
 <template>
   <section class="home-section">
-    <h2 id="work-history"><a href="#work-history">#Work History</a></h2>
+    <h2 id="work-history">
+      <a href="#work-history"><span>#</span>Work History</a>
+    </h2>
 
     <ul>
       <li>
@@ -84,6 +86,11 @@ h3 {
 
 h3 > span {
   font-size: 1rem;
+  color: var(--color-umber);
+}
+
+h4 {
+  color: var(--color-umber);
 }
 
 article > header {
