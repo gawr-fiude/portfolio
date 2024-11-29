@@ -1,28 +1,30 @@
 <template>
-  <header class="[ header ] [ container ]">
-    <a id="skip-to-content" class="header__title" href="#main">
-      <span>{{ `<` }}</span
-      >skip-to-content <span>{{ `/>` }}</span>
-    </a>
+  <header class="header">
+    <div class="[ header__inner ] [ container ]">
+      <a id="skip-to-content" class="header__title" href="#main">
+        <span>{{ `<` }}</span
+        >skip-to-content <span>{{ `/>` }}</span>
+      </a>
 
-    <a href="/" class="header__title">
-      <span>{{ `<` }}</span
-      >goto-eduardo <span>{{ `/>` }}</span>
-    </a>
+      <a href="/" class="header__title">
+        <span>{{ `<` }}</span
+        >goto-eduardo <span>{{ `/>` }}</span>
+      </a>
 
-    <nav class="header__nav">
-      <template v-for="link in navLinks" :key="link.label + link.to">
-        <a v-if="link.to.startsWith('#')" :href="link.to">
-          {{ link.label }}
-        </a>
+      <nav class="header__nav">
+        <template v-for="link in navLinks" :key="link.label + link.to">
+          <a v-if="link.to.startsWith('#')" :href="link.to">
+            {{ link.label }}
+          </a>
 
-        <a v-else :href="link.to" target="_blank" rel="noopener noreferrer">
-          <span
-            >{{ link.label }} <IconExternalLink class="external-link" />
-          </span>
-        </a>
-      </template>
-    </nav>
+          <a v-else :href="link.to" target="_blank" rel="noopener noreferrer">
+            <span
+              >{{ link.label }} <IconExternalLink class="external-link" />
+            </span>
+          </a>
+        </template>
+      </nav>
+    </div>
   </header>
 </template>
 
@@ -55,13 +57,10 @@ const navLinks = [
 
 <style scoped>
 .header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 0;
-
   position: sticky;
   top: 0;
   background-color: var(--color-base);
+  z-index: 1;
 
   #skip-to-content {
     position: absolute;
@@ -70,6 +69,12 @@ const navLinks = [
 
   #skip-to-content:focus {
     transform: translateY(0);
+  }
+
+  .header__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
   }
 
   .header__title {
