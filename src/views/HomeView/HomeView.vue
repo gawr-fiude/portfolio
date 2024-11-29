@@ -15,8 +15,6 @@ import SectionIntroduction from "./components/SectionIntroduction.vue";
 import SectionAboutMe from "./components/SectionAboutMe.vue";
 import SectionWorkHistory from "./components/SectionWorkHistory.vue";
 import SectionEducation from "./components/SectionEducation.vue";
-
-import PlaceholderSection from "@/components/PlaceholderSection.vue";
 </script>
 
 <style scoped>
