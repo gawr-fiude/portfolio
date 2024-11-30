@@ -6,10 +6,10 @@
         >skip-to-content <span>{{ `/>` }}</span>
       </a>
 
-      <a href="/" class="header__title">
+      <div class="header__title">
         <span>{{ `<` }}</span
         >goto-eduardo <span>{{ `/>` }}</span>
-      </a>
+      </div>
 
       <nav class="header__nav">
         <template v-for="link in navLinks" :key="link.label + link.to">
