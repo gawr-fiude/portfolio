@@ -44,14 +44,6 @@ const navLinks = [
     label: "Education",
     to: "#education",
   },
-  {
-    label: "Github",
-    to: "https://github.com/gawr-fiude",
-  },
-  {
-    label: "Linkedin",
-    to: "https://www.linkedin.com/in/eduardo-eiji-goto-926702217",
-  },
 ];
 </script>
 

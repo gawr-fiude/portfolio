@@ -25,10 +25,34 @@
       Trying to make the world a better place, one
       <span class="line-through">div</span> element at a time.
     </p>
+
+    <div class="button-group">
+      <a
+        v-for="link in socialLinks"
+        :key="link.label + link.to"
+        :href="link.to"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-link"
+      >
+        <span>{{ link.label }}</span>
+      </a>
+    </div>
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+const socialLinks = [
+  {
+    label: "Github",
+    to: "https://github.com/gawr-fiude",
+  },
+  {
+    label: "Linkedin",
+    to: "https://www.linkedin.com/in/eduardo-eiji-goto-926702217",
+  },
+];
+</script>
 
 <style scoped>
 section {
@@ -47,5 +71,23 @@ section {
 p {
   font-size: 1.4rem;
   max-width: 40ch;
+}
+
+.external-link {
+  height: 1rem;
+  display: inline-block;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.social-link {
+  padding: 0.5rem 1rem;
+  border: 2px dashed var(--color-primary);
+  text-decoration: none;
 }
 </style>
