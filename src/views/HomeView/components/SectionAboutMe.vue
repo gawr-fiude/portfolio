@@ -4,24 +4,27 @@
       <a href="#about-me"><span>#</span>About Me</a>
     </h2>
 
-    <p>
-      I was born in
-      <a
-        href="https://en.wikipedia.org/wiki/Curitiba"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Curitiba</a
-      >, where I still reside, a city in Brazil known for its public
-      transportation and
-      <a
-        href="https://revistahaus.com.br/haus/blogs-e-colunistas/key-imaguire-junior/historia-do-petit-pave-as-pedras-portuguesas-das-calcadas/"
-        target="_blank"
-        rel="noopener noreferrer"
-        ><em>Petit Pave</em></a
-      >, beautiful pavement mosaics. As a kid, I was pretty shy (still am), and
-      found comfort on books and cartoons. Overall I'd say I'm very approcheable
-      person, even though being an introvert, that loves to learn and teach.
-    </p>
+    <section>
+      <p>
+        I was born in
+        <a
+          href="https://en.wikipedia.org/wiki/Curitiba"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Curitiba</a
+        >, where I still reside, a city in Brazil known for its public
+        transportation and
+        <a
+          href="https://revistahaus.com.br/haus/blogs-e-colunistas/key-imaguire-junior/historia-do-petit-pave-as-pedras-portuguesas-das-calcadas/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><em>Petit Pave</em></a
+        >, beautiful pavement mosaics. As a kid, I was pretty shy (still am),
+        and found comfort on books and cartoons. Overall I'd say I'm very
+        approcheable person, even though being an introvert, that loves to learn
+        and teach.
+      </p>
+    </section>
 
     <section>
       <h3>Hobbies</h3>

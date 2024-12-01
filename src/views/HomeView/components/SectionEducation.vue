@@ -4,86 +4,59 @@
       <a href="#education"><span>#</span>Education</a>
     </h2>
 
-    <ul>
-      <li>
-        <article>
-          <header>
-            <h3>
-              <span>
-                <time datetime="2018">2018</time> -
-                <time datetime="2023">2023</time></span
-              ><br />
-              PUCPR - Pontifícia Universidade Católica do Paraná
-            </h3>
+    <section>
+      <header>
+        <h3>
+          <span>
+            <time datetime="2018">2018</time> -
+            <time datetime="2023">2023</time></span
+          ><br />
+          PUCPR - Pontifícia Universidade Católica do Paraná
+        </h3>
 
-            <h4>Computer Science Bachelor</h4>
-          </header>
+        <h4>Computer Science Bachelor</h4>
+      </header>
 
-          <p>
-            I suppose there’ll never be a time I look back and think I should
-            have picked any other graduation. College was my first experience
-            with actually looking into the foundation of the technologies I have
-            been used to since an early age. There's nothing alike the rewarding
-            feeling of understanding a new concept, solving a new problem.
-          </p>
+      <p>
+        I suppose there’ll never be a time I look back and think I should have
+        picked any other graduation. College was my first experience with
+        actually looking into the foundation of the technologies I have been
+        used to since an early age. There's nothing alike the rewarding feeling
+        of understanding a new concept, solving a new problem.
+      </p>
 
-          <p>
-            In college, I learned how to utilize many of the most common
-            programming languages, such as Python, Java and C++, but also some
-            of the more specialized ones, like Prolog.
-          </p>
+      <p>
+        In college, I learned how to utilize many of the most common programming
+        languages, such as Python, Java and C++, but also some of the more
+        specialized ones, like Prolog.
+      </p>
 
-          <p>
-            My course conclusion paper was an exploratory research on the
-            viability of utilizing GPUs to optimize a C++ stream processing
-            framework.
-          </p>
-        </article>
-      </li>
+      <p>
+        My course conclusion paper was an exploratory research on the viability
+        of utilizing GPUs to optimize a C++ stream processing framework.
+      </p>
+    </section>
 
-      <li>
-        <article>
-          <header>
-            <h3>
-              <span>
-                <time datetime="2014">2014</time> -
-                <time datetime="2019">2019</time></span
-              ><br />
-              Phil Young's/Talken
-            </h3>
+    <section>
+      <header>
+        <h3>
+          <span>
+            <time datetime="2014">2014</time> -
+            <time datetime="2019">2019</time></span
+          ><br />
+          Phil Young's/Talken
+        </h3>
 
-            <h4>English Language Course (TOEFL ITP 647)</h4>
-          </header>
+        <h4>English Language Course (TOEFL ITP 647)</h4>
+      </header>
 
-          <p>
-            Being born in a non-English-speaking country, I have always been
-            stimulated to learn English. I had classes in school, but, to
-            improve myself, I took many years of an actual English language
-            course, so much so that after concluding it, I was to receive a
-            travel prize from the school for my TOEFL performance, which was
-            canceled because of COVID.
-          </p>
-        </article>
-      </li>
-    </ul>
+      <p>
+        Being born in a non-English-speaking country, I have always been
+        stimulated to learn English. I had classes in school, but, to improve
+        myself, I took many years of an actual English language course, so much
+        so that after concluding it, I was to receive a travel prize from the
+        school for my TOEFL performance, which was canceled because of COVID.
+      </p>
+    </section>
   </section>
 </template>
-
-<style scoped>
-h3 {
-  line-height: 1;
-}
-
-h3 > span {
-  font-size: 1rem;
-  color: var(--color-umber);
-}
-
-h4 {
-  color: var(--color-umber);
-}
-
-article > header {
-  margin-bottom: 1rem;
-}
-</style>
