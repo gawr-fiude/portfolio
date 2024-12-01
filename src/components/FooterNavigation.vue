@@ -9,7 +9,14 @@
         </p>
       </blockquote>
 
-      <p>- Oggway</p>
+      <p>- Oogway</p>
+    </div>
+
+    <div class="circle-group">
+      <div class="circle text"></div>
+      <div class="circle primary"></div>
+      <div class="circle umber"></div>
+      <div class="circle peach"></div>
     </div>
   </footer>
 </template>
@@ -30,5 +37,32 @@ footer {
 
 blockquote {
   margin-bottom: 1rem;
+}
+
+.circle-group {
+  display: flex;
+  gap: 0.2rem;
+  margin-top: 1rem;
+}
+
+.circle {
+  height: 1.5rem;
+  aspect-ratio: 1;
+}
+
+.text {
+  background: var(--color-text);
+}
+
+.primary {
+  background: var(--color-primary);
+}
+
+.umber {
+  background: var(--color-umber);
+}
+
+.peach {
+  background: var(--color-peach);
 }
 </style>
