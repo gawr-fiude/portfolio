@@ -11,25 +11,43 @@
         >goto-eduardo <span>{{ `/>` }}</span>
       </div>
 
-      <nav class="header__nav">
-        <template v-for="link in navLinks" :key="link.label + link.to">
-          <a v-if="link.to.startsWith('#')" :href="link.to">
-            {{ link.label }}
-          </a>
-
-          <a v-else :href="link.to" target="_blank" rel="noopener noreferrer">
-            <span
-              >{{ link.label }} <IconExternalLink class="external-link" />
-            </span>
-          </a>
-        </template>
+      <nav v-if="isLargeScreen" class="header__nav">
+        <a v-for="link in navLinks" :key="link.label + link.to" :href="link.to">
+          {{ link.label }}
+        </a>
       </nav>
+
+      <button
+        v-else
+        class="mobile-nav__button"
+        @click="openNavigation = !openNavigation"
+      >
+        <IconMenu v-if="!openNavigation" />
+        <IconX v-else />
+      </button>
     </div>
+
+    <Transition>
+      <nav v-if="openNavigation" class="header__nav--mobile">
+        <a
+          @click="openNavigation = false"
+          v-for="link in navLinks"
+          :key="link.label + link.to"
+          :href="link.to"
+        >
+          {{ link.label }}
+        </a>
+      </nav>
+    </Transition>
   </header>
 </template>
 
 <script setup>
-import IconExternalLink from "@/components/icons/IconExternalLink.vue";
+import { ref } from "vue";
+import { useMediaQuery } from "@vueuse/core";
+
+import IconMenu from "@/components/icons/IconMenu.vue";
+import IconX from "@/components/icons/IconX.vue";
 
 const navLinks = [
   {
@@ -45,6 +63,9 @@ const navLinks = [
     to: "#education",
   },
 ];
+
+const isLargeScreen = useMediaQuery("(min-width: 50rem)");
+const openNavigation = ref(false);
 </script>
 
 <style scoped>
@@ -67,6 +88,7 @@ const navLinks = [
     display: flex;
     justify-content: space-between;
     padding: 1rem 0;
+    align-items: center;
   }
 
   .header__title {
@@ -79,15 +101,40 @@ const navLinks = [
     color: var(--color-primary);
   }
 
-  nav {
+  .header__nav > a:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  /* Mobile Navigation */
+  .mobile-nav__button {
+    height: 1.5rem;
+    aspect-ratio: 1;
+  }
+
+  .header__nav--mobile {
+    position: absolute;
+    background: var(--color-text);
+    color: var(--color-base);
+    width: 100dvw;
+    min-height: 100dvh;
+
     display: flex;
-    gap: 2rem;
-    align-items: center;
+    flex-direction: column;
+  }
+
+  .header__nav--mobile > a {
+    padding: 1rem;
   }
 }
 
-.external-link {
-  height: 1rem;
-  display: inline-block;
+/* Animation for mobile navigation */
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  transform: translateX(100%);
 }
 </style>

@@ -46,7 +46,9 @@ a {
 }
 
 a:focus,
-a:hover {
+a:hover,
+button:focus,
+button:hover {
   background: var(--color-peach);
 }
 
