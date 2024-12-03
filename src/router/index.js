@@ -10,6 +10,14 @@ const router = createRouter({
       component: HomeView,
     },
   ],
+  // eslint-disable-next-line no-unused-vars
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+      };
+    }
+  },
 });
 
 export default router;

@@ -1,22 +1,41 @@
 <template>
   <header class="header">
     <div class="[ header__inner ] [ container ]">
-      <a id="skip-to-content" class="header__title" href="#main">
+      <!-- Skip to Content link -->
+      <a
+        id="skip-to-content"
+        href="#main"
+        aria-label="Skip to Content"
+        class="header__title"
+      >
         <span>{{ `<` }}</span
         >skip-to-content <span>{{ `/>` }}</span>
       </a>
 
-      <div class="header__title">
+      <!-- Home Link -->
+      <!-- Should move to top of page -->
+      <a v-if="useRoute().path === '/'" href="#top" class="header__title">
         <span>{{ `<` }}</span
         >goto-eduardo <span>{{ `/>` }}</span>
-      </div>
+      </a>
+      <router-link v-else to="/" class="header__title">
+        <span>{{ `<` }}</span
+        >goto-eduardo <span>{{ `/>` }}</span>
+      </router-link>
 
+      <!-- Navigation -->
+      <!-- Show a button on Small screens -->
       <nav v-if="isLargeScreen" class="header__nav">
-        <a v-for="link in navLinks" :key="link.label + link.to" :href="link.to">
+        <router-link
+          v-for="link in navLinks"
+          :key="link.label"
+          :to="
+            link.hash ? { path: link.path, hash: link.hash } : `${link.path}`
+          "
+        >
           {{ link.label }}
-        </a>
+        </router-link>
       </nav>
-
       <button
         v-else
         class="mobile-nav__button"
@@ -28,15 +47,18 @@
     </div>
 
     <Transition>
+      <!-- Navigation for Small screens -->
       <nav v-if="openNavigation" class="header__nav--mobile">
-        <a
+        <router-link
           @click="openNavigation = false"
           v-for="link in navLinks"
-          :key="link.label + link.to"
-          :href="link.to"
+          :key="link.label"
+          :to="
+            link.hash ? { path: link.path, hash: link.hash } : `${link.path}`
+          "
         >
           {{ link.label }}
-        </a>
+        </router-link>
       </nav>
     </Transition>
   </header>
@@ -45,6 +67,7 @@
 <script setup>
 import { ref } from "vue";
 import { useMediaQuery } from "@vueuse/core";
+import { useRoute } from "vue-router";
 
 import IconMenu from "@/components/icons/IconMenu.vue";
 import IconX from "@/components/icons/IconX.vue";
@@ -52,15 +75,18 @@ import IconX from "@/components/icons/IconX.vue";
 const navLinks = [
   {
     label: "About Me",
-    to: "#about-me",
+    path: "/",
+    hash: "#about-me",
   },
   {
     label: "Work History",
-    to: "#work-history",
+    path: "/",
+    hash: "#work-history",
   },
   {
     label: "Education",
-    to: "#education",
+    path: "/",
+    hash: "#education",
   },
 ];
 
@@ -92,7 +118,7 @@ const openNavigation = ref(false);
   }
 
   .header__title {
-    font-weight: bolder;
+    font-weight: 600;
     font-size: 1.2rem;
     text-decoration: none;
   }
@@ -130,7 +156,7 @@ const openNavigation = ref(false);
 /* Animation for mobile navigation */
 .v-enter-active,
 .v-leave-active {
-  transition: all 0.5s ease;
+  transition: all 0.5s ease-in-out;
 }
 
 .v-enter-from,
