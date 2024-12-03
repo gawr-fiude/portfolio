@@ -23,8 +23,11 @@ import SectionEducation from "./components/SectionEducation.vue";
 
   h2 {
     padding-top: 4rem;
-    transform: translateX(-1ch);
     margin-bottom: 1rem;
+
+    @media screen and (min-width: 80rem) {
+      transform: translateX(-1ch);
+    }
   }
 
   h2 > a > span:first-child {
