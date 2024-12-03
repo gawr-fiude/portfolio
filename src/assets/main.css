@@ -4,7 +4,10 @@
 :root {
   font-family: "Cousine", ui-monospace, "Cascadia Code", "Source Code Pro",
     Menlo, Consolas, "DejaVu Sans Mono", monospace;
-  font-size: 1.15rem;
+  font-size: clamp(1rem, 4vw, 1.15rem);
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -43,6 +46,7 @@ p {
 
 a {
   text-decoration: 2px underline dashed var(--color-primary);
+  text-underline-offset: 25%;
 }
 
 a:focus,
